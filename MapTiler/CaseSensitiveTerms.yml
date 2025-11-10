@@ -1,0 +1,9 @@
+extends: substitution
+message: "Prefer '%s' over '%s'."
+level: warning
+link: https://www.maptiler.com/
+ignorecase: true
+action:
+  name: replace
+swap:
+  (?<![\w.-])maptiler(?![\w.-]): MapTiler
