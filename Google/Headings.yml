@@ -17,6 +17,9 @@ exceptions:
   - Kubernetes
   - Linux
   - macOS
+  - Mapbox
+  - MapLibre
+  - MapTiler
   - Marketplace
   - MongoDB
   - REPL
