@@ -11,14 +11,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: zip -r Google.zip Google -x "*.DS_Store"
+      - name: Create ZIPs
+        run: |
+          zip -r Google.zip Google -x "*.DS_Store"
+          zip -r MapTiler.zip MapTiler -x "*.DS_Store"
 
-      - name: Upload style to release
+      - name: Upload Google.zip to release
         uses: svenstaro/upload-release-action@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Google.zip
+
+      - name: Upload MapTiler.zip to release
+        uses: svenstaro/upload-release-action@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: MapTiler.zip
 
   cucumber:
     runs-on: ubuntu-latest
