@@ -9,7 +9,8 @@ This repo contains a set of linting rules for Vale based on the Google style gui
 
 ## Google style guide
 
-> **NOTE**: This project is neither maintained nor endorsed by Google.
+> [!WARNING]
+> This project is neither maintained nor endorsed by Google.
 
 This repository contains a [Vale-compatible](https://github.com/errata-ai/vale) implementation of the [*Google Developer Documentation Style Guide*](https://developers.google.com/style/) ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
 
